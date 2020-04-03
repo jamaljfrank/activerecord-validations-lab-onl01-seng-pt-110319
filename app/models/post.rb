@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   validates :title, presence: true
   validates :content, length: { minimum: 250 }
   validates :summary, length: { maximum: 250 }
-  validates :category, inclusion: { in: %w(Fiction Non_Fiiction)}
+  validates :category, inclusion: { in: %w(Fiction Non_Fiction)}
   validate :clickbait?
   
   
@@ -13,7 +13,7 @@ private
   CLICKBAIT_WORDS = [
     "Won't Believe",
     "Secret",
-    "Top [number]",
+    "Top [0-9]",
     "Guess"
   ]
   
