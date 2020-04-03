@@ -13,7 +13,7 @@ private
   CLICKBAIT_WORDS = [
     "Won't Believe",
     "Secret",
-    "Top [0-9]",
+    "Top [number]",
     "Guess"
   ]
   
