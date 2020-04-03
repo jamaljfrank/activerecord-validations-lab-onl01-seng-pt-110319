@@ -1,6 +1,6 @@
 class TitleValidator < ActiveModel::Validator
   
-  CLICKBAIT_WORDS = 
+  CLICKBAIT_WORDS = [
     /Won't Believe/
     /Secret/
     /Top [0-9]/
