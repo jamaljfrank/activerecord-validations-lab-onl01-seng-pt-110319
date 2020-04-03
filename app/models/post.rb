@@ -22,7 +22,7 @@ private
   end
   
   def clickbait?
-    unless bait words
+    unless bait_words
       errors.add(:title, "must be clickbait")
     end  
   end
