@@ -8,22 +8,4 @@ class Post < ActiveRecord::Base
   
 
 
-private
 
-  CLICKBAIT_WORDS = [
-    "Won't Believe",
-    "Secret",
-    "Top [0-9]",
-    "Guess"
-  ]
-  
-  def bait_words
-    CLICKBAIT_WORDS.any? {|bait| params[:title].include?(bait)}
-  end
-  
-  def clickbait?
-    unless bait_words
-      errors.add(:title, "must be clickbait")
-    end  
-  end
-end
