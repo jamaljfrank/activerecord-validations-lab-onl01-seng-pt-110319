@@ -8,7 +8,7 @@ class TitleValidator < ActiveModel::Validator
   
   
   def validate(record)
-    unless record.title.match?(/Won't Believe/)
+    if CLICKBAIT_words.none? { |word| word.match record.title }
       record.errors[:title] << "Title must include clickbait words."
     end
   end
