@@ -4,7 +4,8 @@ class TitleValidator < ActiveModel::Validator
     /Won't Believe/
     /Secret/
     /Top [0-9]/
-    /Guess/;
+    /Guess/
+    ]
   
   
   def validate(record)
