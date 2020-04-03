@@ -18,7 +18,7 @@ private
   ]
   
   def bait_words
-    CLICKBAIT_WORDS.any? {|bait| :title.include?(bait)}
+    CLICKBAIT_WORDS.any? {|bait| params[:title].include?(bait)}
   end
   
   def clickbait?
