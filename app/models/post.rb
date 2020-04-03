@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   validates :summary, length: { maximum: 250 }
   validates :category, inclusion: { in: %w(Fiction Non_Fiction)}
   validates_with TitleValidator
-  
+end
   
 
 
